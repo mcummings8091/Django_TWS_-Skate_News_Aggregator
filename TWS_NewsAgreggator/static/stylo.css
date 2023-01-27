@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@media screen and (min-width: 768px) {
+  section{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    padding: 32px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+li, a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 120px;
+  height: 80%;
+  padding: 10px;
+  margin-top: 12px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0px 10px;
+}
+
+.nav-links li a {
+  transition: all 0.25s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: red;
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
+  color: black;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+section {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 12px;
+  width: 90%
+}
+
+.gallery-img {
+  width: 100%;
+  height: 339px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 41px 4px rgb(0 0 0 / 50%);
+}
+
+.gallery-img::after {
+  content:"";
+  width: 100%
+}
+
+.img-text {
+    width: 529px; 
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  padding: 13px;
+  opacity: 1;
+  font-size: 18px;
+  transform: translateY(-120px);
+
+}
+
+p {
+  margin-bottom: 18px;
+  color: indigo;
+}
+
+.img-text p {
+  margin-top: -28px;
+  color: red;
+  text-align: center;
+}
+
+.article-card .img-text a:hover {
+    color: red;
+}
+
+.vid-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  z-index: 0;
+}
+
+
+.article-card {
+    transition: 0.3s ease-out;
+    justify-content: center;
+}
+
+.article-card:hover {
+    transform: translateY(-18px);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+#email {
+  height: 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: darkgrey;
+  margin-bottom: -20px
+}
+
+.btn-main {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-main a {
+    color: black;
+
+}

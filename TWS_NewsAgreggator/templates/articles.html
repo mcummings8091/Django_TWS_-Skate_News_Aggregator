@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Skateaholicx</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/stylo.css">
+    </head>
+    <body>
+      <header id="header">
+        <img id="header-img" src="https://i.postimg.cc/PrDPp3Vg/secondsuntemplogo.png" class="logo" alt="second sun logo">
+        <nav id="nav-bar">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#articles">Articles</a></li>
+            <li><a class="nav-link" href="#secondsun">Second Sun</a></li>
+            </ul>
+        </nav>
+      </header>
+  
+      <section id="articles">
+        <h1>Articles</h1>
+        <div class="btn-main">
+          <button><a href="{% url 'scrape' %}">Get my Articles</a></button>
+        </div>
+        <div class="gallery">
+          {% for article in articles %}
+          <div class="article-card">
+            <img class="gallery-img" src="https://www.skatedeluxe.com/blog/wp-content/uploads/2017/02/skateboard-news.jpg">
+            <div class="img-text">
+              <p><a target="_blank" href="{{article.link}}">{{article.title}}</a></p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="secondsun">
+        <h1>Second Sun Longboard Edit</h1>
+        <p>Second Sun is an upcoming skateshop that has been a life long dream of two brothers. Our idea is to make a skateshop that is wholly supportive of all types of skating, from Downhill to street.</p>
+        <div class="vid-container">
+          <iframe class="video" src="https://www.youtube.com/embed/lRuaWMouY4c" allowfullscreen></iframe>
+        </div>
+      </section>
+  
+    </body>
+</html>

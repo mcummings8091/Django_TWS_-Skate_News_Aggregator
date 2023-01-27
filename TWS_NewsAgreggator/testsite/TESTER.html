@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skate News</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Skate News</h1>
+            <a href="{% url 'scrape' %}">Get my morning news</a>
+        </header>
+        <h1 class="headline">Articles</h1>
+        <div class="article-gallery">
+            {% for article in articles %}
+            <div class="article-card">
+                <div class="article-content">
+                    <h2><a href="{{article.link}}">{{article.title}}<h2></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

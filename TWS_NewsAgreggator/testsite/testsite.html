@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+     <header>
+
+        <nav class="navbar">
+          <ul class="link-group">
+            <li class="link active"><a href="#">Home</a></li>
+            <li class="link"><a href="#">Timeline</a></li>
+            <li class="link"><a href="#">Abilities</a></li>
+        </nav>
+
+      </header>
+    <main id="main">
+
+      <h1 class="title" id="title">Anakin Skywalker</h1>
+      <p><i>Legendary Jedi Knight. Chosen one of the Jedi Order.</i></p>
+
+      <section class="home-section active">
+        <h1 class="headline">Articles</h1>
+        <div class="btn-main">
+          <button><a href="{% url 'scrape' %}">Get my morning news</a></button>
+        </div>
+        <div class="article-gallery">
+            {% for article in articles %}
+            <div class="article-card">
+                <div class="article-content">
+                    <h2><a href="{{article.link}}">{{article.title}}<h2></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-container">
+          <p id="tribute-info">A timeline of Anakins life.</p>
+          <div class="tribute-info-content">
+            <ul class="timeline">
+              <li><b>41 BBY</b> - Through unknown means, Anakin is born fatherless.</li>
+              <li><b>32 BBY</b> - Anakin is found by the jedi and is thought to be The Chosen One of The Jedi Prophecy. During this time he would meet his future wife Padme.</li>
+              <li><b>23 BBY</b> - Many years would pass and on the planet Coruscant he re-encounters Padme. The clone wars begins.</li>
+              <li><b>23 BBY</b> - Anakin Marries the love of his life in secret, on her home planet Naboo.</li>
+              <li><b>22 BBY</b> - Anakin takes on an apprentice, Ahsoka Tano</li>
+              <li><b>20 BBY</b> - Ahsoka leaves the temple after false accusations made against her. This moment would serve to further shake Anakin's faith in The Jedi Order.</li>
+              <li><b>19 BBY</b> - After years of shaking faith and manipulation from Darth Sidious. Anakin retreats into himself, becoming Darth Vader. After witnessing Anakins fall to the dark side, Padme loses the will to live and dies after giving birth to twins, Luke and Leia.</li>
+              <li><b>4 ABY</b> - Anakin resurfaces to fulfill the prophecy of the chosen one and save his son. Dying in the light he thought long out of reach.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="abilities-section">
+        <div class="lightaber-section">
+          <h1>Lightsaber Combat</h1>
+          <ul>
+            <li><p>Despite being naturally extremely talented, Anakin Skywalker was initially lax with his lightsaber training, though he believed that he could rival the Jedi Masters. Despite his relative laziness, Skywalker was the best duelist in his class, even though he started later than his classmates. In his training he preferred lightsaber combat over Force mastery, and he spent more time on the physical aspects of becoming a Jedi. By the time he was nineteen, Skywalker was so gifted and skilled in dueling that he believed he already rivaled Master Yoda. When the Clone Wars began Skywalker was a skilled enough duelist to contend against Count Dooku, who was one of the most skilled swordsmen in the galaxy.</p></li>
+            <li><p>Skywalker was also adept in the use of Form IV, often incorporating its techniques (primarily acrobatics) into his dueling style. He was well aware that the key to deflecting the fire of multiple adversaries was fluidity of motion, which he mastered enough to having adjusted the classic techniques of Form IV to better defend against ranged attackers. He demonstrated this in a holographic recording, later found in Kanan Jarrus' holocron.</p></li>
+            <li><p>Skywalker was particularly skilled in Form V—both the Shien and Djem So variants. He was able to deflect not only blaster fire with ease, but also shots from freighters. He made good use of Djem So's strength-based strikes and counterattacks to overpower or overwhelm his opponent. Skywalker also used Jar'Kai on some occasions: He used Kenobi's lightsaber during his first duel with Count Dooku on Geonosis, he wielded Barriss Offee's own lightsaber against her along with his own, and he wielded Dooku's lightsaber in addition to his own to execute him after defeating him on the Invisible Hand.</p></li>
+          </ul>
+        </div>
+        <div class="Force-section">
+          <h1>Force Prowess</h1>
+          <ul>
+            <li><p>Skywalker's midi-chlorian count was off the scale—above 20,000, reportedly even greater than Yoda's. When he was nine, Anakin was already skilled in having quick reflexes and precognition.</p></li>
+            <li><p>In his teen years, Skywalker's Force training progressed to the point where he was able to manifest various abilities, and Kenobi thought of him as being "advanced for his age." He was very skilled at using the Force to scan his surroundings, such as when he sensed poisonous kouhuns infiltrating Senator Padmé Amidala's bedroom from standing outside.</p></li>
+            <li><p>Skywalker was skilled in telekinesis. Even as a late beginner, by his own admission, he was very good at it, better than any of his peers and most of the older Padawans as well. He could lift lightsabers in the air and ignite them with ease, as he did once to scare a pair of Padawans who had called him a "slave to his emotions."</p></li>
+          </ul>
+        </div>            
+        </section>
+
+      <footer>
+        <p><i>"One day, I will become the greatest Jedi EVER. I will even learn how to stop people from dying."</i></p>
+        <div class="extra-info">
+          <p>Source for information and more in depth on Anakin Skywalker <a href ="https://starwars.fandom.com/wiki/Anakin_Skywalker#Found_by_the_Jedi " id="tribute-link" target="_blank"> here.</a></p>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        const links = document.querySelectorAll('.link');
+        const sections = document.querySelectorAll('section')
+  
+        let activeLink = 0;
+  
+        links.forEach((link, i) => {
+            link.addEventListener('click', () => {
+                if(activeLink != i){
+                    links[activeLink].classList.remove('active');
+                    link.classList.add('active');
+                    sections[activeLink].classList.remove('active')
+  
+                    setTimeout(() => {
+                        activeLink = i;
+                        sections[i].classList.add('active');
+                    }, 1000);
+                }
+            })
+        })
+      </script>
+
+  </body>

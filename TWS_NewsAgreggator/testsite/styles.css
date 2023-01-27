@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    font-family: sans-serif;
+  }
+
+  .navbar {
+    position: sticky;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-section.active, .info-section.active, .abilities-section.active {
+    position: relative;
+    opacity: 1;
+  }
+  
+  .frame {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient( darkgrey, lightblue, darkgrey);
+    opacity: 0.8;
+  }
+  
+  .frame  img {
+    display: block;
+    width: 75%;
+    height: auto;
+    margin: 0px auto;
+    max-width: 100%;
+    max-height: 625px;
+  }
+  
+  h1, h3, p, figcaption {
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .timeline > li {
+    display: block;
+    margin: 12px auto;
+  }
+
+  .home-section {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    transition: 0.5s;
+    opacity: 0;
+    margin: 18px auto;
+  }
+  
+  .info-section {
+    width: 80%;
+    height: auto;
+    transition: 1s;
+    opacity: 0;
+    position: fixed;
+    margin: 18px auto;
+  }
+
+  .abilities-section {
+    width: 80%;
+    height: auto;
+    transition: 1s;
+    opacity: 0;
+    position: fixed;
+    margin: 18px auto;
+  }
+
+  .abilities-section > h1 {
+    margin-bottom: 18px;
+  }
+
+  .abilities-section div > h1 {
+    margin-bottom: 18px;
+  }
+
+  .abilities-section > div {
+    margin-bottom: 18px;
+  }
+
+  .abilities-section > div > ul> li {
+    margin-bottom: 12px;
+  }
+  
+  .tribute-info-content {
+    border: 2px solid white;
+    padding: 15px;
+  }
+  
+  .extra-info {
+    margin-top: 20px;
+    color: white;
+  }
+  
+  h1 {
+    margin-bottom: -10px
+  }
+  
+  .frame > img {
+    border-radius: 20px;
+  }
+
+  .link-group > li {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+.article-content {
+    background-image: url("https://www.skatedeluxe.com/blog/wp-content/uploads/2017/02/skateboard-news.jpg");
+    background-size: cover;
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.article-gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 22px;
+    padding: 22px 12px;
+}

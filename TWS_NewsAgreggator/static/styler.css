@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+
+.navbar{
+   width: 100%;
+   position: sticky;
+   top: o;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 9;
+   background: #1a1a1a; 
+}
+
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+
+.articles-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+
+}
+
+.article-heading{
+   font-size: 80px;
+   background: #252525;
+   text-transform: capitalize;
+   text-align: center;
+   margin-top: 80px;
+   margin-bottom: 50px;
+   color: #1a1a1a;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-stroke: 8px transparent
+}
+
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.article-card{
+    height: 400px;
+    position: relative;
+}
+
+.article-img{
+    width: 529px;
+    height: 339px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+    border-radius: 20px;
+}
+
+
+.article-content{
+    width: 529px;
+    position: relative;
+    padding: 40px;
+    color: #252525;
+
+    
+}
+
+.article-title{
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+    text-align: center;
+}
+
+.article-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.article-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.article-btn.live{
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
